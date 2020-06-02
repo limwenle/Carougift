@@ -6,9 +6,11 @@ import HomeScreen from "./app/screens/Home";
 import AboutScreen from "./app/screens/About";
 import ReviewForm from "./app/screens/reviewForm";
 import SubmissionScreen from "./app/screens/Submitted";
+import LoginScreen from "./app/screens/Login";
+import SignupScreen from "./app/screens/SignUp";
+import PasswordScreen from "./app/screens/Password";
 
 const Stack = createStackNavigator();
-//hellos
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
         }}
         initialRouteName="Home"
       >
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Password" component={PasswordScreen} />
+        <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="About" component={AboutScreen} />
         <Stack.Screen name="ReviewForm" component={ReviewForm} />
