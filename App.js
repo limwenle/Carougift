@@ -9,9 +9,11 @@ import SubmissionScreen from "./app/screens/Submitted";
 import CompanyForm from "./app/screens/CompanyForm";
 import FamilyForm from "./app/screens/FamilyForm";
 import IndividualForm from "./app/screens/IndividualForm";
+import LoginScreen from "./app/screens/Login";
+import SignupScreen from "./app/screens/SignUp";
+import PasswordScreen from "./app/screens/Password";
 
 const Stack = createStackNavigator();
-//hellos
 
 function App() {
 	return (
@@ -30,9 +32,16 @@ function App() {
 				}}
 				initialRouteName="Home"
 			>
+				<Stack.Screen name="Login" component={LoginScreen} />
+				<Stack.Screen name="Password" component={PasswordScreen} />
+				<Stack.Screen name="Signup" component={SignupScreen} />
 				<Stack.Screen name="Home" component={HomeScreen} />
 				<Stack.Screen name="About" component={AboutScreen} />
 				<Stack.Screen name="ReviewForm" component={ReviewForm} />
+				<Stack.Screen
+					name="SubmissionScreen"
+					component={SubmissionScreen}
+				/>
 				<Stack.Screen
 					name="SubmissionScreen"
 					component={SubmissionScreen}

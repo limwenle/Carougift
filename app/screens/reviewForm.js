@@ -14,36 +14,18 @@ export default function ReviewForm() {
 				{(props) => (
 					<View>
 						<TextInput
-							style={{
-								borderBottomColor: "gray",
-								borderBottomWidth: 1,
-								fontSize: 24,
-								padding: 10,
-							}}
 							placeholder="Review title"
 							onChangeText={props.handleChange("title")}
 							value={props.values.title}
 						/>
 						<TextInput
 							multiline
-							style={{
-								borderBottomColor: "gray",
-								borderBottomWidth: 1,
-								fontSize: 24,
-								padding: 10,
-							}}
 							placeholder="Review body"
 							onChangeText={props.handleChange("body")}
 							value={props.values.body}
 						/>
 						<TextInput
 							multiline
-							style={{
-								borderBottomColor: "gray",
-								borderBottomWidth: 1,
-								fontSize: 24,
-								padding: 10,
-							}}
 							placeholder="Rating (1-5)"
 							onChangeText={props.handleChange("rating")}
 							value={props.values.rating}
