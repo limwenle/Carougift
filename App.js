@@ -6,6 +6,7 @@ import HomeScreen from "./app/screens/Home";
 import AboutScreen from "./app/screens/About";
 import ReviewForm from "./app/screens/reviewForm";
 import SubmissionScreen from "./app/screens/Submitted";
+import HelpScreen from "./app/screens/Help";
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,8 @@ function App() {
 					name="SubmissionScreen"
 					component={SubmissionScreen}
 				/>
+
+				<Stack.Screen name="Help" component={HelpScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

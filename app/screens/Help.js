@@ -6,23 +6,23 @@ function HomeScreen({ navigation }) {
 		<View
 			style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
 		>
-			<Text>Welcome to CanIGift</Text>
+			<Text>I would like to give to ... </Text>
 			<Button
 				color="crimson"
 				paddingTop="100"
-				title="About"
+				title="Businesses"
 				onPress={() => navigation.navigate("About")}
 			/>
 			<Button
 				color="crimson"
 				paddingTop="100"
-				title="Make a request"
+				title="Individuals"
 				onPress={() => navigation.navigate("ReviewForm")}
 			/>
 			<Button
 				color="crimson"
 				paddingTop="100"
-				title="Offer help"
+				title="Families"
 				onPress={() => navigation.navigate("Help")}
 			/>
 		</View>
