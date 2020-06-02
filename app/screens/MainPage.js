@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+	TouchableOpacity,
 	Button,
 	View,
 	Text,
@@ -15,7 +16,12 @@ import {
 function MainPage({ navigation }) {
 	return (
 		<View
-			style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+			style={{
+				flex: 1,
+				alignItems: "center",
+				justifyContent: "center",
+				backgroundColor: "#C7F1E5",
+			}}
 		>
 			<Text
 				Text
@@ -28,28 +34,28 @@ function MainPage({ navigation }) {
 				Welcome to CarouGift!
 			</Text>
 			<Button
-				color="crimson"
+				color="#497DE9"
 				paddingTop="100"
 				title="Who are we"
 				title="About Us"
 				onPress={() => navigation.navigate("About")}
 			/>
 			<Button
-				color="crimson"
+				color="#497DE9"
 				paddingTop="100"
 				title="Request for help"
 				onPress={() => navigation.navigate("Request")}
 			/>
 
 			<Button
-				color="crimson"
+				color="#497DE9"
 				paddingTop="100"
 				title="Help Someone"
 				onPress={() => navigation.navigate("HelpSomeone")}
 			/>
 
 			<Button
-				color="orange"
+				color="#497DE9"
 				paddingTop="100"
 				title="View my account"
 				onPress={() => navigation.navigate("MainManageListings")}

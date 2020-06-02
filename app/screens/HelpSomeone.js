@@ -35,7 +35,7 @@ function HelpSomeoneScreen({ navigation }) {
 				color="grey"
 				paddingTop="100"
 				title="Businesses"
-				onPress={() => navigation.navigate("Business-Listing")}
+				onPress={() => navigation.navigate("ListingDetails")}
 			/>
 			<Image
 				source={{
