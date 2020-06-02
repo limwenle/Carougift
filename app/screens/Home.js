@@ -17,7 +17,7 @@ function HomeScreen({ navigation }) {
 				color="crimson"
 				paddingTop="100"
 				title="Make a request"
-				onPress={() => navigation.navigate("ReviewForm")}
+				onPress={() => navigation.navigate("IndividualForm")}
 			/>
 		</View>
 	);
