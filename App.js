@@ -8,34 +8,32 @@ import ReviewForm from "./app/screens/reviewForm";
 import SubmissionScreen from "./app/screens/Submitted";
 
 const Stack = createStackNavigator();
+//hellos
 
 function App() {
-	return (
-		<NavigationContainer>
-			<Stack.Navigator
-				screenOptions={{
-					headerStyle: {
-						backgroundColor: "#FF7F00",
-					},
-					headerTintColor: "#fff",
-					headerTitleStyle: {
-						fontWeight: "bold",
-					},
-					headerTitleAlign: "center",
-					title: "CarouGift",
-				}}
-				initialRouteName="Home"
-			>
-				<Stack.Screen name="Home" component={HomeScreen} />
-				<Stack.Screen name="About" component={AboutScreen} />
-				<Stack.Screen name="ReviewForm" component={ReviewForm} />
-				<Stack.Screen
-					name="SubmissionScreen"
-					component={SubmissionScreen}
-				/>
-			</Stack.Navigator>
-		</NavigationContainer>
-	);
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#FF7F00",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          headerTitleAlign: "center",
+          title: "CarouGift",
+        }}
+        initialRouteName="Home"
+      >
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="About" component={AboutScreen} />
+        <Stack.Screen name="ReviewForm" component={ReviewForm} />
+        <Stack.Screen name="SubmissionScreen" component={SubmissionScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
 export default App;
