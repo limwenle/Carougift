@@ -80,7 +80,10 @@ export default function IndividualForm() {
 						<Button
 							title="Submit"
 							color="maroon"
-							onPress={props.handleSubmit}
+							onPress={() => {
+								props.handleSubmit;
+								navigation.navigate("MainManageListings");
+							}}
 						/>
 					</View>
 				)}

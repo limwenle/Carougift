@@ -7,9 +7,9 @@ import {
 	TextInput,
 	Alert,
 	Image,
-	ImageBackground,
 } from "react-native";
-import styles from "../../styles/global";
+//import Icon from 'react-native-vector-icons/Ionicons';
+//import { createBottomTabNavigator } from "react-navigation-bottom-tabs";
 
 function HomeScreen({ navigation }) {
 	return (
@@ -26,12 +26,6 @@ function HomeScreen({ navigation }) {
 			<Text>
 				{"\n"}Welcome to CanIGift!{"\n"}
 			</Text>
-			<Button
-				color="crimson"
-				paddingTop="100"
-				title="Who are we"
-				onPress={() => navigation.navigate("About")}
-			/>
 
 			{/*
       <Button
