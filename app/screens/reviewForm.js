@@ -14,19 +14,19 @@ export default function ReviewForm() {
 				{(props) => (
 					<View>
 						<TextInput
-							placeholder="Review title"
+							placeholder="Name"
 							onChangeText={props.handleChange("title")}
 							value={props.values.title}
 						/>
 						<TextInput
 							multiline
-							placeholder="Review body"
+							placeholder="What Do I Need?"
 							onChangeText={props.handleChange("body")}
 							value={props.values.body}
 						/>
 						<TextInput
 							multiline
-							placeholder="Rating (1-5)"
+							placeholder="Description"
 							onChangeText={props.handleChange("rating")}
 							value={props.values.rating}
 						/>

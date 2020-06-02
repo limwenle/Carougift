@@ -20,4 +20,3 @@ function AboutScreen({ navigation }) {
 }
 
 export default AboutScreen;
-//testinggg
