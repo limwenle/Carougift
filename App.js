@@ -6,6 +6,9 @@ import HomeScreen from "./app/screens/Home";
 import AboutScreen from "./app/screens/About";
 import ReviewForm from "./app/screens/reviewForm";
 import SubmissionScreen from "./app/screens/Submitted";
+import CompanyForm from "./app/screens/CompanyForm";
+import FamilyForm from "./app/screens/FamilyForm";
+import IndividualForm from "./app/screens/IndividualForm";
 
 const Stack = createStackNavigator();
 
@@ -32,6 +35,12 @@ function App() {
 				<Stack.Screen
 					name="SubmissionScreen"
 					component={SubmissionScreen}
+				/>
+				<Stack.Screen name="CompanyForm" component={CompanyForm} />
+				<Stack.Screen name="FamilyForm" component={FamilyForm} />
+				<Stack.Screen
+					name="IndividualForm"
+					component={IndividualForm}
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
