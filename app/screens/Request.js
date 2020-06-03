@@ -1,7 +1,7 @@
 import * as React from "react";
 import {
 	Button,
-	View,
+	ScrollView,
 	Text,
 	StyleSheet,
 	TextInput,
@@ -11,7 +11,7 @@ import {
 
 function RequestScreen({ navigation }) {
 	return (
-		<View
+		<ScrollView
 		//style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
 		>
 			<Text
@@ -65,7 +65,7 @@ function RequestScreen({ navigation }) {
 				title="Family"
 				onPress={() => navigation.navigate("FamilyForm")}
 			/>
-		</View>
+		</ScrollView>
 	);
 }
 

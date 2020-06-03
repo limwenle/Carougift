@@ -22,6 +22,7 @@ import OneListingPage from "./ManageListingsScreen/OneListingPage";
 import MultipleListingsPage from "./ManageListingsScreen/MultipleListingsPage";
 import ChatScreen from "./app/screens/Chat";
 import ChatListScreen from "./app/screens/ChatList";
+import ExternalPage from "./app/screens/External";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -29,18 +30,9 @@ const Tab = createBottomTabNavigator();
 function HomeTabs() {
 	return (
 		<Tab.Navigator>
-			<Tab.Screen name="HelpSomeone" component={HelpSomeoneScreen} />
+			<Tab.Screen name="HelpSomeone" component={MultipleListingsPage} />
 			<Tab.Screen name="Request" component={RequestScreen} />
-			<Tab.Screen
-				name="About"
-				component={AboutScreen}
-				options={{
-					tabBarLabel: "Home",
-					tabBarIcon: ({ color, size }) => (
-						<Ionicons name="ios-add" color={color} size={size} />
-					),
-				}}
-			/>
+			<Tab.Screen name="ChatList" component={ChatListScreen} />
 			<Tab.Screen
 				name="MainManageListings"
 				component={MainManageListings}
@@ -71,16 +63,10 @@ function App() {
 				<Stack.Screen name="Password" component={PasswordScreen} />
 				<Stack.Screen name="Signup" component={SignupScreen} />
 				<Stack.Screen name="Home" component={HomeScreen} />
-				<Stack.Screen name="MainPage" component={MainPage} />
+				<Stack.Screen name="MainPage" component={HomeTabs} />
 				<Stack.Screen name="About" component={AboutScreen} />
-				<Stack.Screen
-					name="SubmissionScreen"
-					component={SubmissionScreen}
-				/>
 				<Stack.Screen name="External" component={ExternalPage} />
 
-				<Stack.Screen name="CompanyForm" component={CompanyForm} />
-				<Stack.Screen name="FamilyForm" component={FamilyForm} />
 				<Stack.Screen
 					name="IndividualForm"
 					component={IndividualForm}
@@ -96,10 +82,7 @@ function App() {
 
 				<Stack.Screen name="CompanyForm" component={CompanyForm} />
 				<Stack.Screen name="FamilyForm" component={FamilyForm} />
-				<Stack.Screen
-					name="IndividualForm"
-					component={IndividualForm}
-				/>
+
 				<Stack.Screen
 					name="MultipleListingsPage"
 					component={MultipleListingsPage}
@@ -125,7 +108,6 @@ function App() {
 					options={{ title: "Account" }}
 				/>
 				<Stack.Screen name="Chat" component={ChatScreen} />
-				<Stack.Screen name="ChatList" component={ChatListScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
