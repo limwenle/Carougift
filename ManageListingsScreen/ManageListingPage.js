@@ -99,12 +99,16 @@ const styles = StyleSheet.create({
 		fontWeight: "bold",
 		textAlign: "center",
 		top: 5,
-		color: "#497DE9",
+		color: "#FE8A71",
 	},
 	requestDetails: {
 		fontSize: 20,
 		fontStyle: "italic",
 		textAlign: "center",
+	},
+	backgroundColor: {
+		flex: 1,
+		backgroundColor: "#F9D89C",
 	},
 });
 

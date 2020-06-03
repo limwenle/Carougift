@@ -1,42 +1,3 @@
-/* 
-import * as React from "react";
-import {
-  Button,
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Alert,
-  Image,
-} from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import styles from "../../styles/global";
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={styles.homePage}>
-      <Image
-        source={{
-          width: 200,
-          height: 200,
-          uri:
-            "https://cdn4.iconfinder.com/data/icons/thank-you/256/Artboard_5_copy-512.png",
-        }}
-      />
-
-      <Image source={require("../assets/Logo.png")} />
-      <Text>{"\n"}</Text>
-
-      <TouchableOpacity onPress={() => navigation.navigate("Login")}>
-        <Text style={styles.loginButton}>Log in</Text>
-      </TouchableOpacity>
-    </View>
-  );
-}
-
-export default HomeScreen;
-*/
-
 import * as React from "react";
 import { Formik } from "formik";
 import { View, Image, Text, TextInput, Button, StyleSheet } from "react-native";
@@ -95,30 +56,6 @@ export default function LoginScreen({ navigation }) {
 							paddingLeft={6}
 						/>
 						<Text>{"\n"}</Text>
-
-						{/*
-            <Button
-              title="Log in"
-              color="maroon"
-              onPress={
-                (props.handleSubmit, () => navigation.navigate("MainPage"))
-              }
-			/>
-
-			<Button
-              color="crimson"
-              paddingTop="100"
-              title="Do not have an account? Sign up with us"
-              onPress={() => navigation.navigate("Signup")}
-			/>
-			
-			<Text
-              style={styles.forgotPassword}
-              onPress={() => navigation.navigate("Password")} // link to retrieve password page
-            >
-              Forgot password?
-            </Text>
-			*/}
 
 						<TouchableOpacity
 							onPress={() => navigation.navigate("MainPage")}
