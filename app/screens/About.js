@@ -31,12 +31,12 @@ function AboutScreen({ navigation }) {
 				avenue for our local selfless citizens to contribute in their
 				own ways and help all these businesses tide through this tough
 				period. As an extension from our goal, we want to provide
-				support for families who are facing similar difficulties as we
-				are one Singapore.
+				similar support for families and high-risk individuals who are
+				facing similar difficulties.
 				{"\n"} {"\n"}
-				SME, Entrepreneurs and Families can request for help, and any
-				kind soul will reach out to you and help out in their own way,
-				be it monetary or technicalities. {"\n"}
+				Businesses, Families and Individual can request for help, and
+				any kind soul will reach out to you and help out in their own
+				way, be it monetary or technicalities. {"\n"}
 			</Text>
 			<Text style={styles.welcomeText2}>Together We Give! {"\n"}</Text>
 			<Button
