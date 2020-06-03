@@ -18,6 +18,8 @@ import RequestScreen from "./app/screens/Request";
 import MainPage from "./app/screens/MainPage";
 import MainManageListings from "./ManageListingsScreen.js/MainManageListings";
 import ListingDetails from "./ManageListingsScreen.js/ListingDetails";
+import ExternalPage from "./app/screens/External";
+import { Image } from "react-native";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -52,14 +54,14 @@ function App() {
 			<Stack.Navigator
 				screenOptions={{
 					headerStyle: {
-						backgroundColor: "#497DE9",
+						backgroundColor: "#Fe8a71",
 					},
 					headerTintColor: "#fff",
 					headerTitleStyle: {
 						fontWeight: "bold",
 					},
 					headerTitleAlign: "center",
-					title: "CarouGift",
+					title: "CanIGive",
 				}}
 				initialRouteName="Home"
 			>
@@ -67,12 +69,13 @@ function App() {
 				<Stack.Screen name="Password" component={PasswordScreen} />
 				<Stack.Screen name="Signup" component={SignupScreen} />
 				<Stack.Screen name="Home" component={HomeScreen} />
-				<Stack.Screen name="MainPage" component={HomeTabs} />
-
+				<Stack.Screen name="MainPage" component={MainPage} />
+				<Stack.Screen name="About" component={AboutScreen} />
 				<Stack.Screen
 					name="SubmissionScreen"
 					component={SubmissionScreen}
 				/>
+				<Stack.Screen name="External" component={ExternalPage} />
 
 				<Stack.Screen name="CompanyForm" component={CompanyForm} />
 				<Stack.Screen name="FamilyForm" component={FamilyForm} />
@@ -82,9 +85,19 @@ function App() {
 				/>
 
 				<Stack.Screen
+					name="HelpSomeone"
+					component={HelpSomeoneScreen}
+				/>
+				<Stack.Screen name="Request" component={RequestScreen} />
+				<Stack.Screen
 					name="ListingDetails"
 					component={ListingDetails}
 					options={{ title: "Listing Details" }}
+				/>
+				<Stack.Screen
+					name="MainManageListings"
+					component={MainManageListings}
+					options={{ title: "Account" }}
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
