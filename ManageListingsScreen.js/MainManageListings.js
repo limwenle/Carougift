@@ -35,7 +35,10 @@ function MainManageListings({ navigation }) {
 				<Text style={{ fontSize: 20, color: "white" }}>Settings</Text>
 			</TouchableOpacity>
 
-			<TouchableOpacity style={styles.messages}>
+			<TouchableOpacity 
+				style={styles.messages}
+				onPress={() => navigation.navigate("ChatList")}
+			>
 				<Text style={{ fontSize: 20, color: "white" }}>
 					View My Messages
 				</Text>
