@@ -1,11 +1,12 @@
 import * as React from "react";
 import { Formik } from "formik";
 import { View, Text, TextInput, Button } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import styles from "../../styles/global";
 
 export default function PasswordScreen({ navigation }) {
   return (
-    <View>
+    <View style={styles.passwordPage}>
       <Formik
         initialValues={{
           email: "",
@@ -23,17 +24,23 @@ export default function PasswordScreen({ navigation }) {
               placeholder="Enter email address"
               onChangeText={props.handleChange("email")}
               value={props.values.email}
+              underlineColorAndroid={"grey"}
+              height={40}
+              paddingLeft={6}
             />
 
             <Text>{"\n"}</Text>
 
-            <Button
-              title="Reset my password"
-              color="maroon"
-              onPress={
-                (props.handleSubmit, () => navigation.navigate("Home")) // link to backend
-              }
-            />
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("Login");
+                alert(
+                  "Your reset password request has been sent to your email address. You will now be directed to the Log In page."
+                );
+              }}
+            >
+              <Text style={styles.loginButton}>Reset My Password</Text>
+            </TouchableOpacity>
           </View>
         )}
       </Formik>

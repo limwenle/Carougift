@@ -1,49 +1,36 @@
 import * as React from "react";
 import {
-	Button,
-	View,
-	Text,
-	StyleSheet,
-	TextInput,
-	Alert,
-	Image,
+  Button,
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  Alert,
+  Image,
 } from "react-native";
-//import Icon from 'react-native-vector-icons/Ionicons';
-//import { createBottomTabNavigator } from "react-navigation-bottom-tabs";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import styles from "../../styles/global";
 
 function HomeScreen({ navigation }) {
-	return (
-		<View
-			style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-		>
-			<Image
-				source={{
-					width: 200,
-					height: 300,
-					uri: "https://picsum.photos/200/300",
-				}}
-			/>
-			<Text>
-				{"\n"}Welcome to CanIGift!{"\n"}
-			</Text>
+  return (
+    <View style={styles.homePage}>
+      <Image
+        source={{
+          width: 200,
+          height: 200,
+          uri:
+            "https://cdn4.iconfinder.com/data/icons/thank-you/256/Artboard_5_copy-512.png",
+        }}
+      />
 
-			{/*
-      <Button
-        color="crimson"
-        paddingTop="100"
-        title="Make a request"
-        onPress={() => navigation.navigate("ReviewForm")}
-	  />
-	*/}
+      <Image source={require("../assets/Logo.png")} />
+      <Text>{"\n"}</Text>
 
-			<Button
-				color="crimson"
-				paddingTop="100"
-				title="Log In"
-				onPress={() => navigation.navigate("Login")}
-			/>
-		</View>
-	);
+      <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+        <Text style={styles.loginButton}>Log in</Text>
+      </TouchableOpacity>
+    </View>
+  );
 }
 
 export default HomeScreen;
