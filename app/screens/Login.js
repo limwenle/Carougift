@@ -84,8 +84,16 @@ export default function LoginScreen({ navigation }) {
               Forgot password?
             </Text>
 
+            <Text
+              style={styles.forgotPassword}
+              onPress={() => navigation.navigate("Signup")} // link to retrieve password page
+            >
+              Do not have an account? Sign up with us!
+            </Text>
+
             <Text>{"\n"}</Text>
 
+            {/*
             <TouchableOpacity
               onPress={() => {
                 navigation.navigate("Signup");
@@ -95,6 +103,7 @@ export default function LoginScreen({ navigation }) {
                 Do not have an account? Sign up with us
               </Text>
             </TouchableOpacity>
+            */}
           </View>
         )}
       </Formik>

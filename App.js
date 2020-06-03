@@ -22,6 +22,9 @@ import MultipleListingsPage from "./ManageListingsScreen/MultipleListingsPage";
 import ChatScreen from "./app/screens/Chat";
 import ChatListScreen from "./app/screens/ChatList";
 import ExternalPage from "./app/screens/External";
+import HuFamilyRequest from "./ManageListingsScreen/HuFamilyRequest";
+import MollyIndivRequest from "./ManageListingsScreen/MollyIndivRequest";
+import BeautyClothingRequest from "./ManageListingsScreen/BeautyClothingRequest";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -195,6 +198,21 @@ function App() {
 				<Stack.Screen
 					name="OneListingPage"
 					component={OneListingPage}
+					options={{ title: "Request details" }}
+				/>
+				<Stack.Screen
+					name="HuFamilyRequest"
+					component={HuFamilyRequest}
+					options={{ title: "Request details" }}
+				/>
+				<Stack.Screen
+					name="MollyIndivRequest"
+					component={MollyIndivRequest}
+					options={{ title: "Request details" }}
+				/>
+				<Stack.Screen
+					name="BeautyClothingRequest"
+					component={BeautyClothingRequest}
 					options={{ title: "Request details" }}
 				/>
 				<Stack.Screen

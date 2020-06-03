@@ -12,7 +12,7 @@ import styles from "../styles/global";
 import Unorderedlist from "react-native-unordered-list";
 import * as Progress from "react-native-progress";
 
-function OneListingPage({ navigation }) {
+function BeautyClothingRequest({ navigation }) {
   return (
     <>
       <ScrollView style={styles.sultanaPage}>
@@ -28,7 +28,7 @@ function OneListingPage({ navigation }) {
           <Image
             source={{
               uri:
-                "https://s.yimg.com/uu/api/res/1.2/sM.jBOH2_j.eBjsmn3v1RQ--~B/aD0xOTM2O3c9MjU5MjtzbT0xO2FwcGlkPXl0YWNoeW9u/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2019-08/d7729310-c570-11e9-87fb-68abcc472697",
+                "https://shopsinsg.com/wp-content/uploads/2016/09/joop-clothing-store-white-sands-singapore.jpg",
             }}
             style={{
               width: 415,
@@ -38,28 +38,30 @@ function OneListingPage({ navigation }) {
           />
 
           <Text style={styles.sultanaHeading}>
-            {"\n"}Sultana Book Store {"\n"}
+            {"\n"}Beauty Clothing Website Building Help {"\n"}
           </Text>
         </View>
 
         <Unorderedlist style={styles.sultanaTop}>
           <Text>
+            Campaign Name:
+            <Text style={styles.underlineText}>
+              Beauty Clothing Website Building Help
+            </Text>
+          </Text>
+        </Unorderedlist>
+
+        <Unorderedlist style={styles.sultanaTop}>
+          <Text>
             Company Name:
-            <Text style={styles.underlineText}>Sultana Book Store</Text>
+            <Text style={styles.underlineText}>Beauty Clothing</Text>
           </Text>
         </Unorderedlist>
 
         <Unorderedlist style={styles.sultanaTop}>
           <Text>
             UEN Number:
-            <Text style={styles.underlineText}>12345678A</Text>
-          </Text>
-        </Unorderedlist>
-
-        <Unorderedlist style={styles.sultanaTop}>
-          <Text>
-            Target Fund:
-            <Text style={styles.underlineText}>$1,000 {"\n"}</Text>
+            <Text style={styles.underlineText}>12345678B {"\n"}</Text>
           </Text>
         </Unorderedlist>
 
@@ -70,34 +72,14 @@ function OneListingPage({ navigation }) {
         </View>
 
         <Text style={styles.sultanaDescription}>
-          My wife and I owns the bookstore. Due to the COVID-19 situation, we
-          have not been able to operate for the past 2 months. Though there have
-          been grants given by the government, we are unable to sustain our
-          losses at this rate. We are seeking donations to keep our
-          old-fashioned bookstore afloat. Any amount will be appreciated, thank
-          you! {"\n"}
+          Hello I am the owner of Beauty Clothing, a physical clothes shop in
+          Greenridge Shopping Centre. I am unable to keep up with the rental
+          costs, and have moved all my stocks out of my shop because I cannot
+          afford anymore. They are now at home and I am trying to clear them
+          using a website, my son has been helping me but he does not know
+          exactly how to create a website online. Are there anyone here who
+          knows how to build a website? Please contact me, thank you. {"\n"}
         </Text>
-
-        {/*
-        <Image
-          style={styles.progressBar}
-          source={require("../app/assets/ProgressBar.png")}
-        /> */}
-
-        <Text>
-          <Text style={styles.boldText}>$477</Text>
-          of $1,000 raised
-        </Text>
-        <Progress.Bar
-          progress={0.477}
-          width={412}
-          height={20}
-          color={"green"}
-          borderColor={"black"}
-          borderWidth={1}
-        />
-
-        <Text>{"\n"}</Text>
 
         <TouchableOpacity
           onPress={() =>
@@ -187,4 +169,4 @@ const styles = StyleSheet.create({
 */
 }
 
-export default OneListingPage;
+export default BeautyClothingRequest;

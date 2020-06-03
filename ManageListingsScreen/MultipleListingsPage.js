@@ -8,6 +8,7 @@ import {
 	TouchableOpacity,
 	Picker,
 } from "react-native";
+import styles from "../styles/global";
 
 function MultipleListingsPage({ navigation }) {
 	return (
@@ -22,7 +23,6 @@ function MultipleListingsPage({ navigation }) {
 				<Picker.Item label="Products" value="js" />
 				<Picker.Item label="Services" value="js" />
 			</Picker>
-
 			<Text
 				style={{
 					fontSize: 40,
@@ -77,8 +77,7 @@ function MultipleListingsPage({ navigation }) {
 							color: "white",
 						}}
 					>
-						Donate to help Sultana Bookstore stay afloat during the
-						crisis.
+						Sultana Book Store
 					</Text>
 				</TouchableOpacity>
 				<TouchableOpacity
@@ -88,17 +87,11 @@ function MultipleListingsPage({ navigation }) {
 						alignContent: "center",
 						justifyContent: "center",
 					}}
-					onPress={() => navigation.navigate("OneListingPage")}
+					onPress={() => navigation.navigate("MollyIndivRequest")}
 				>
 					<Image
-						source={{
-							uri:
-								"https://www.seriouseats.com/images/20110829-168346-singapore-hawker-center-curry-rice.jpg",
-						}}
-						style={{
-							width: "30%",
-							height: 120,
-						}}
+						source={require("../app/assets/MollySew.jpg")}
+						style={styles.MlpHu}
 					/>
 					<Text
 						style={{
@@ -110,8 +103,7 @@ function MultipleListingsPage({ navigation }) {
 							color: "white",
 						}}
 					>
-						Help Uncle Lee's business remain profitable in this
-						crisis.
+						Molly's Mask Up Task!
 					</Text>
 				</TouchableOpacity>
 				<TouchableOpacity
@@ -121,17 +113,11 @@ function MultipleListingsPage({ navigation }) {
 						alignContent: "center",
 						justifyContent: "center",
 					}}
-					onPress={() => navigation.navigate("OneListingPage")}
+					onPress={() => navigation.navigate("HuFamilyRequest")}
 				>
 					<Image
-						source={{
-							uri:
-								"https://www.asiaone.com/sites/default/files/original_images/Jan2016/20160124_850_bigfamily_tnp.jpg",
-						}}
-						style={{
-							width: "30%",
-							height: 120,
-						}}
+						source={require("../app/assets/HuFamily.jpeg")}
+						style={styles.MlpHu}
 					/>
 					<Text
 						style={{
@@ -143,8 +129,7 @@ function MultipleListingsPage({ navigation }) {
 							color: "white",
 						}}
 					>
-						Help Alice, who doesn't have access to a laptop for
-						home-based learning.
+						Hu Family
 					</Text>
 				</TouchableOpacity>
 				<TouchableOpacity
@@ -154,7 +139,7 @@ function MultipleListingsPage({ navigation }) {
 						alignContent: "center",
 						justifyContent: "center",
 					}}
-					onPress={() => navigation.navigate("OneListingPage")}
+					onPress={() => navigation.navigate("BeautyClothingRequest")}
 				>
 					<Image
 						source={{
@@ -176,9 +161,10 @@ function MultipleListingsPage({ navigation }) {
 							color: "white",
 						}}
 					>
-						Requesting for technical service to setup online shop
+						Beauty Clothing Website Building Help
 					</Text>
 				</TouchableOpacity>
+
 				<TouchableOpacity
 					style={{
 						flex: 1,
@@ -216,11 +202,11 @@ function MultipleListingsPage({ navigation }) {
 		</>
 	);
 }
-
+/* 
 const styles = StyleSheet.create({
-	//   scrollview: {
-	//     top: 30,
-	//   },
-});
+  //   scrollview: {
+  //     top: 30,
+  //   },
+}); */
 
 export default MultipleListingsPage;

@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#F9D89C",
     alignItems: "center",
-    paddingTop: 40,
+    paddingTop: 80,
     paddingLeft: 65,
     paddingRight: 65,
     // justifyContent: "center",
@@ -96,6 +96,54 @@ const styles = StyleSheet.create({
   externalPageText: {
     fontSize: 30,
     textAlign: "center",
+  },
+  sultanaHeading: {
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  sultanaTop: {
+    paddingLeft: 20,
+  },
+  underlineText: {
+    textDecorationLine: "underline",
+  },
+  sultanaDescription: {
+    textAlign: "center",
+  },
+  sultanaDescriptionHeading: {
+    textAlign: "center",
+    textDecorationLine: "underline",
+  },
+  sultanaHelpButton: {
+    backgroundColor: "#FE8A71",
+    borderWidth: 1,
+    borderRadius: 5,
+    color: "white",
+    fontSize: 14,
+    fontWeight: "bold",
+    // padding: 12,
+    textAlign: "center",
+  },
+  progressBar: {
+    height: 30,
+    width: 200,
+    justifyContent: "center",
+  },
+  sultanaPage: {
+    backgroundColor: "#F9D89C",
+  },
+  boldText: {
+    fontWeight: "bold",
+    fontSize: 25,
+  },
+  HuFamilyImage: {
+    width: 415,
+    height: 250,
+  },
+  MlpHu: {
+    width: "30%",
+    height: 120,
   },
 });
 

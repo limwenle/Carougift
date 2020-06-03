@@ -12,7 +12,7 @@ import styles from "../styles/global";
 import Unorderedlist from "react-native-unordered-list";
 import * as Progress from "react-native-progress";
 
-function OneListingPage({ navigation }) {
+function HuFamilyRequest({ navigation }) {
   return (
     <>
       <ScrollView style={styles.sultanaPage}>
@@ -26,40 +26,28 @@ function OneListingPage({ navigation }) {
 
         <View>
           <Image
-            source={{
-              uri:
-                "https://s.yimg.com/uu/api/res/1.2/sM.jBOH2_j.eBjsmn3v1RQ--~B/aD0xOTM2O3c9MjU5MjtzbT0xO2FwcGlkPXl0YWNoeW9u/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2019-08/d7729310-c570-11e9-87fb-68abcc472697",
-            }}
-            style={{
-              width: 415,
-              height: 250,
-              alignSelf: "center",
-            }}
+            source={require("../app/assets/HuFamily.jpeg")}
+            style={styles.HuFamilyImage}
           />
 
           <Text style={styles.sultanaHeading}>
-            {"\n"}Sultana Book Store {"\n"}
+            {"\n"}Hu Family {"\n"}
           </Text>
         </View>
 
         <Unorderedlist style={styles.sultanaTop}>
           <Text>
-            Company Name:
-            <Text style={styles.underlineText}>Sultana Book Store</Text>
+            Campaign Name:
+            <Text style={styles.underlineText}>Hu Family</Text>
           </Text>
         </Unorderedlist>
 
         <Unorderedlist style={styles.sultanaTop}>
           <Text>
-            UEN Number:
-            <Text style={styles.underlineText}>12345678A</Text>
-          </Text>
-        </Unorderedlist>
-
-        <Unorderedlist style={styles.sultanaTop}>
-          <Text>
-            Target Fund:
-            <Text style={styles.underlineText}>$1,000 {"\n"}</Text>
+            Services requested:
+            <Text style={styles.underlineText}>
+              Laptop loan, Tuition, Technology service {"\n"}
+            </Text>
           </Text>
         </Unorderedlist>
 
@@ -70,19 +58,18 @@ function OneListingPage({ navigation }) {
         </View>
 
         <Text style={styles.sultanaDescription}>
-          My wife and I owns the bookstore. Due to the COVID-19 situation, we
-          have not been able to operate for the past 2 months. Though there have
-          been grants given by the government, we are unable to sustain our
-          losses at this rate. We are seeking donations to keep our
-          old-fashioned bookstore afloat. Any amount will be appreciated, thank
-          you! {"\n"}
+          I have 7 children at home in between ages of 4-17. Everyone is at home
+          studying. Live in 2 room flat at Tan Kah Kee area. There is not enough
+          studying space. Only have 2 laptops at home, for 6 children to share.
+          Slow internet. They are not very smart. They do homework slow, means
+          other siblings cannot use laptop. {"\n"}
         </Text>
 
         {/*
         <Image
           style={styles.progressBar}
           source={require("../app/assets/ProgressBar.png")}
-        /> */}
+        /> 
 
         <Text>
           <Text style={styles.boldText}>$477</Text>
@@ -95,9 +82,9 @@ function OneListingPage({ navigation }) {
           color={"green"}
           borderColor={"black"}
           borderWidth={1}
-        />
+        /> 
 
-        <Text>{"\n"}</Text>
+        <Text>{"\n"}</Text> */}
 
         <TouchableOpacity
           onPress={() =>
@@ -187,4 +174,4 @@ const styles = StyleSheet.create({
 */
 }
 
-export default OneListingPage;
+export default HuFamilyRequest;
