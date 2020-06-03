@@ -89,7 +89,7 @@ function BeautyClothingRequest({ navigation }) {
               [
                 {
                   text: "Yes",
-                  onPress: () => navigation.navigate("Chat"),
+                  onPress: () => navigation.navigate("ChatList"),
                 },
                 { text: "No" },
               ]
