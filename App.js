@@ -1,8 +1,8 @@
 import * as React from "react";
+import { Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "./app/screens/Home";
 import AboutScreen from "./app/screens/About";
 import SubmissionScreen from "./app/screens/Submitted";
@@ -14,7 +14,6 @@ import SignupScreen from "./app/screens/SignUp";
 import PasswordScreen from "./app/screens/Password";
 import HelpSomeoneScreen from "./app/screens/HelpSomeone";
 import RequestScreen from "./app/screens/Request";
-import MainPage from "./app/screens/MainPage";
 import MainManageListings from "./ManageListingsScreen/MainManageListings";
 import EditListingDetails from "./ManageListingsScreen/EditListingDetails";
 import ManageListingPage from "./ManageListingsScreen/ManageListingPage";
@@ -29,14 +28,110 @@ const Tab = createBottomTabNavigator();
 
 function HomeTabs() {
 	return (
-		<Tab.Navigator>
-			<Tab.Screen name="HelpSomeone" component={MultipleListingsPage} />
-			<Tab.Screen name="Request" component={RequestScreen} />
-			<Tab.Screen name="ChatList" component={ChatListScreen} />
+		<Tab.Navigator
+			tabBarOptions={{
+				tabStyle: { borderRightWidth: 0.8 },
+			}}
+		>
+			<Tab.Screen
+				name="HelpSomeone"
+				component={MultipleListingsPage}
+				options={{
+					tabBarLabel: "Home",
+					tabBarIcon: ({ focused }) =>
+						focused ? (
+							<Image
+								style={{
+									width: 30,
+									height: 30,
+								}}
+								source={require("./app/assets/home.png")}
+							/>
+						) : (
+							<Image
+								style={{
+									width: 30,
+									height: 30,
+								}}
+								source={require("./app/assets/home.png")}
+							/>
+						),
+				}}
+			/>
+			<Tab.Screen
+				name="Request"
+				component={RequestScreen}
+				options={{
+					tabBarLabel: "Request",
+					tabBarIcon: ({ focused }) =>
+						focused ? (
+							<Image
+								style={{
+									width: 20,
+									height: 20,
+								}}
+								source={require("./app/assets/request.png")}
+							/>
+						) : (
+							<Image
+								style={{
+									width: 20,
+									height: 20,
+								}}
+								source={require("./app/assets/request.png")}
+							/>
+						),
+				}}
+			/>
+			<Tab.Screen
+				name="ChatList"
+				component={ChatListScreen}
+				options={{
+					tabBarLabel: "Message",
+					tabBarIcon: ({ focused }) =>
+						focused ? (
+							<Image
+								style={{
+									width: 30,
+									height: 30,
+								}}
+								source={require("./app/assets/chat.png")}
+							/>
+						) : (
+							<Image
+								style={{
+									width: 30,
+									height: 30,
+								}}
+								source={require("./app/assets/chat.png")}
+							/>
+						),
+				}}
+			/>
 			<Tab.Screen
 				name="MainManageListings"
 				component={MainManageListings}
-				options={{ title: "Account" }}
+				options={{
+					tabBarLabel: "Account",
+					tabBarIcon: ({ focused }) =>
+						focused ? (
+							<Image
+								style={{
+									width: 30,
+									height: 30,
+								}}
+								source={require("./app/assets/account.png")}
+							/>
+						) : (
+							<Image
+								style={{
+									width: 30,
+									height: 30,
+								}}
+								source={require("./app/assets/account.png")}
+							/>
+						),
+				}}
 			/>
 		</Tab.Navigator>
 	);

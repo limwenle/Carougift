@@ -22,6 +22,7 @@ function MultipleListingsPage({ navigation }) {
 				<Picker.Item label="Products" value="js" />
 				<Picker.Item label="Services" value="js" />
 			</Picker>
+
 			<Text
 				style={{
 					fontSize: 40,
