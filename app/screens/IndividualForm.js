@@ -1,93 +1,77 @@
 import * as React from "react";
-import { Formik } from "formik";
 import { Text, View, Button, TextInput } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import RadioForm from "react-native-simple-radio-button";
+
+var radio_props = [
+	{ label: "Service", value: 0 },
+	{ label: "Product", value: 1 },
+	{ label: "Donations", value: 2 },
+];
 
 export default function IndividualForm() {
 	return (
 		<ScrollView style={{ padding: 30, backgroundColor: "white" }}>
-			<Formik
-				initialValues={{
-					Name: "",
-					TargetFund: "",
-					Rewards: "",
-					Description: "",
-				}}
-				onSubmit={(values) => {
-					console.log(values);
-				}}
-			>
-				{(props) => (
-					<View>
-						<Text
-							style={{
-								fontSize: 24,
-								textAlign: "center",
-							}}
-						>
-							Request form for Individual
-						</Text>
-						<TextInput
-							style={{
-								borderBottomColor: "black",
-								borderBottomWidth: 2,
-								fontSize: 20,
-								padding: 10,
-								marginTop: 20,
-							}}
-							placeholder="Insert Name"
-							onChangeText={props.handleChange("Name")}
-							value={props.values.Name}
-						/>
-						<TextInput
-							style={{
-								borderBottomColor: "black",
-								borderBottomWidth: 2,
-								fontSize: 20,
-								padding: 10,
-							}}
-							placeholder="Input Target Fund"
-							onChangeText={props.handleChange("TargetFund")}
-							value={props.values.TargetFund}
-						/>
-						<TextInput
-							multiline
-							style={{
-								borderBottomColor: "black",
-								borderBottomWidth: 2,
-								fontSize: 20,
-								padding: 10,
-							}}
-							placeholder="What would funders get?"
-							onChangeText={props.handleChange("Rewards")}
-							value={props.values.Rewards}
-						/>
-						<TextInput
-							multiline
-							style={{
-								borderBottomColor: "black",
-								borderBottomWidth: 2,
-								fontSize: 20,
-								padding: 10,
-								height: 200,
-								textAlignVertical: "top",
-								marginBottom: 40,
-							}}
-							placeholder="Description of Goal"
-							onChangeText={props.handleChange("Description")}
-							value={props.values.Description}
-						/>
-						<Button
-							title="Submit"
-							color="maroon"
-							onPress={() => {
-								props.handleSubmit;
-								navigation.navigate("MainManageListings");
-							}}
-						/>
-					</View>
-				)}
-			</Formik>
+			<View>
+				<Text> Campaign Name: (Optional)</Text>
+				<TextInput
+					style={{
+						borderColor: "black",
+						borderWidth: 2,
+						fontSize: 15,
+						padding: 5,
+					}}
+				/>
+				<Text> Company Name</Text>
+				<TextInput
+					style={{
+						borderColor: "black",
+						borderWidth: 2,
+						fontSize: 15,
+						padding: 5,
+					}}
+				/>
+				<Text> Description of idea: </Text>
+				<TextInput
+					multiline
+					style={{
+						borderColor: "black",
+						borderWidth: 2,
+						fontSize: 15,
+						padding: 5,
+						height: 150,
+						textAlignVertical: "top",
+					}}
+					placeholderTextColor="grey"
+					placeholder="e.g: I am a first class honour graduate from NUS, my team of 4 have been working together on this project of reusable toilet paper."
+				/>
+				<Text> What do you need: </Text>
+				<RadioForm
+					radio_props={radio_props}
+					initial={0}
+					onPress={(value) => {
+						this.setState({ value: value });
+					}}
+					buttonColor={"black"}
+					selectedButtonColor={"black"}
+					buttonSize={10}
+				/>
+				<TextInput
+					multiline
+					style={{
+						borderColor: "black",
+						borderWidth: 2,
+						fontSize: 15,
+						padding: 5,
+						height: 150,
+						textAlignVertical: "top",
+						marginBottom: 20,
+					}}
+					placeholderTextColor="grey"
+					placeholder="Service: I need a professional advice from successful start-up."
+				/>
+				<Button title="Submit" color="maroon" />
+			</View>
 		</ScrollView>
 	);
 }

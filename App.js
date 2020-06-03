@@ -1,6 +1,9 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "./app/screens/Home";
 import AboutScreen from "./app/screens/About";
 import SubmissionScreen from "./app/screens/Submitted";
@@ -17,6 +20,31 @@ import MainManageListings from "./ManageListingsScreen.js/MainManageListings";
 import ListingDetails from "./ManageListingsScreen.js/ListingDetails";
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+function HomeTabs() {
+	return (
+		<Tab.Navigator>
+			<Tab.Screen name="HelpSomeone" component={HelpSomeoneScreen} />
+			<Tab.Screen name="Request" component={RequestScreen} />
+			<Tab.Screen
+				name="About"
+				component={AboutScreen}
+				options={{
+					tabBarLabel: "Home",
+					tabBarIcon: ({ color, size }) => (
+						<Ionicons name="ios-add" color={color} size={size} />
+					),
+				}}
+			/>
+			<Tab.Screen
+				name="MainManageListings"
+				component={MainManageListings}
+				options={{ title: "Account" }}
+			/>
+		</Tab.Navigator>
+	);
+}
 
 function App() {
 	return (
@@ -39,8 +67,8 @@ function App() {
 				<Stack.Screen name="Password" component={PasswordScreen} />
 				<Stack.Screen name="Signup" component={SignupScreen} />
 				<Stack.Screen name="Home" component={HomeScreen} />
-				<Stack.Screen name="MainPage" component={MainPage} />
-				<Stack.Screen name="About" component={AboutScreen} />
+				<Stack.Screen name="MainPage" component={HomeTabs} />
+
 				<Stack.Screen
 					name="SubmissionScreen"
 					component={SubmissionScreen}
@@ -54,19 +82,9 @@ function App() {
 				/>
 
 				<Stack.Screen
-					name="HelpSomeone"
-					component={HelpSomeoneScreen}
-				/>
-				<Stack.Screen name="Request" component={RequestScreen} />
-				<Stack.Screen
 					name="ListingDetails"
 					component={ListingDetails}
 					options={{ title: "Listing Details" }}
-				/>
-				<Stack.Screen
-					name="MainManageListings"
-					component={MainManageListings}
-					options={{ title: "Account" }}
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
