@@ -20,6 +20,8 @@ import EditListingDetails from "./ManageListingsScreen/EditListingDetails";
 import ManageListingPage from "./ManageListingsScreen/ManageListingPage";
 import OneListingPage from "./ManageListingsScreen/OneListingPage";
 import MultipleListingsPage from "./ManageListingsScreen/MultipleListingsPage";
+import ChatScreen from "./app/screens/Chat";
+import ChatListScreen from "./app/screens/ChatList";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -54,7 +56,7 @@ function App() {
 			<Stack.Navigator
 				screenOptions={{
 					headerStyle: {
-						backgroundColor: "#Fe8a71",
+						backgroundColor: "#FF7F00",
 					},
 					headerTintColor: "#fff",
 					headerTitleStyle: {
@@ -122,6 +124,8 @@ function App() {
 					component={MainManageListings}
 					options={{ title: "Account" }}
 				/>
+				<Stack.Screen name="Chat" component={ChatScreen} />
+				<Stack.Screen name="ChatList" component={ChatListScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
