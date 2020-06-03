@@ -1,3 +1,5 @@
+//can delete
+
 import React from "react";
 import {
   ScrollView,
