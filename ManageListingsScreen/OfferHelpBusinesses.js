@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, ScrollView, View, Image } from "react-native";
+import { Text, ScrollView, View, Image, StyleSheet } from "react-native";
 
 function OfferHelpBusinesses({ navigation }) {
   return (
@@ -38,7 +38,7 @@ function OfferHelpBusinesses({ navigation }) {
           }}
         >
           <Image
-            source={require("./app/assets/elephant.png")}
+            source={{ uri: "https://picsum.photos/300/200" }}
             style={{
               width: "30%",
               height: 120,
@@ -66,7 +66,7 @@ function OfferHelpBusinesses({ navigation }) {
           }}
         >
           <Image
-            source={require("./app/assets/logo.jpg")}
+            source={{ uri: "https://picsum.photos/200/300" }}
             style={{
               width: "30%",
               height: 120,
@@ -94,7 +94,7 @@ function OfferHelpBusinesses({ navigation }) {
           }}
         >
           <Image
-            source={require("./app/assets/pfp.jpg")}
+            source={{ uri: "https://picsum.photos/200/300" }}
             style={{
               width: "30%",
               height: 120,

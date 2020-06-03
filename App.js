@@ -2,7 +2,6 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "./app/screens/Home";
 import AboutScreen from "./app/screens/About";
@@ -16,10 +15,11 @@ import PasswordScreen from "./app/screens/Password";
 import HelpSomeoneScreen from "./app/screens/HelpSomeone";
 import RequestScreen from "./app/screens/Request";
 import MainPage from "./app/screens/MainPage";
-import MainManageListings from "./ManageListingsScreen.js/MainManageListings";
-import ListingDetails from "./ManageListingsScreen.js/ListingDetails";
-import ExternalPage from "./app/screens/External";
-import { Image } from "react-native";
+import MainManageListings from "./ManageListingsScreen/MainManageListings";
+import EditListingDetails from "./ManageListingsScreen/EditListingDetails";
+import ManageListingPage from "./ManageListingsScreen/ManageListingPage";
+import OneListingPage from "./ManageListingsScreen/OneListingPage";
+import MultipleListingsPage from "./ManageListingsScreen/MultipleListingsPage";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -83,16 +83,39 @@ function App() {
 					name="IndividualForm"
 					component={IndividualForm}
 				/>
+				<Stack.Screen
+					name="ManageListingPage"
+					component={ManageListingPage}
+				/>
+				<Stack.Screen
+					name="SubmissionScreen"
+					component={SubmissionScreen}
+				/>
 
+				<Stack.Screen name="CompanyForm" component={CompanyForm} />
+				<Stack.Screen name="FamilyForm" component={FamilyForm} />
+				<Stack.Screen
+					name="IndividualForm"
+					component={IndividualForm}
+				/>
+				<Stack.Screen
+					name="MultipleListingsPage"
+					component={MultipleListingsPage}
+				/>
 				<Stack.Screen
 					name="HelpSomeone"
 					component={HelpSomeoneScreen}
 				/>
 				<Stack.Screen name="Request" component={RequestScreen} />
 				<Stack.Screen
-					name="ListingDetails"
-					component={ListingDetails}
-					options={{ title: "Listing Details" }}
+					name="EditListingDetails"
+					component={EditListingDetails}
+					options={{ title: "Manage My Request(s)" }}
+				/>
+				<Stack.Screen
+					name="OneListingPage"
+					component={OneListingPage}
+					options={{ title: "Request details" }}
 				/>
 				<Stack.Screen
 					name="MainManageListings"
