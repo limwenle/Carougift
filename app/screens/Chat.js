@@ -3,24 +3,21 @@ import { GiftedChat } from 'react-native-gifted-chat';
 
 export default function ChatScreen() {
   const [messages, setMessages] = useState([
-    /**
-     * Mock message data
-     */
-    // example of system message
+    // system message
     {
       _id: 0,
       text: 'New chat created.',
       createdAt: new Date().getTime(),
       system: true
     },
-    // example of chat message
+    // chat message
     {
       _id: 1,
-      text: 'Hello! Thank you for your donation, it means a lot to me and my family.',
+      text: 'Hello! Thank you for your donation, it means a lot to me, and will definitely help my business tide over this tough period.',
       createdAt: new Date().getTime(),
       user: {
         _id: 2,
-        name: 'Test User'
+        name: 'Lim Wen Le'
       }
     }
   ]);
