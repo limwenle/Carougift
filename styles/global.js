@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     alignItems: "center",
     flex: 1,
+    backgroundColor: "#F9D89C",
   },
   welcomeText1: {
     fontSize: 16,
@@ -144,6 +145,9 @@ const styles = StyleSheet.create({
   MlpHu: {
     width: "30%",
     height: 120,
+  },
+  accountPage: {
+    backgroundColor: "#F9D89C",
   },
 });
 
