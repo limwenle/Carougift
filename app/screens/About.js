@@ -26,19 +26,19 @@ function AboutScreen({ navigation }) {
 				Hello! We are a group of students from NUS. {"\n"}
 			</Text>
 			<Text style={styles.welcomeText1}>
-				CanIGift(?) is a platform for local donors to connect with the
-				needy community in Singapore, especially in times of need such
-				as during a public health crisis situation. There may be small
-				businesses, families or individuals who are particularly
-				impacted, and require additional assistance from the wider
-				community. {"\n"} {"\n"} Here, you can create a crowdfunding
-				campaign, request for products or services, or browse through
-				the list of requests of others and see if you can give back in
-				one way or another. {"\n"}
+				CanIGive is a platform aimed towards supporting our local Small
+				and Medium Enterprises(SME) and Entrepreneurs by providing an
+				avenue for our local selfless citizens to contribute in their
+				own ways and help all these businesses tide through this tough
+				period. As an extension from our goal, we want to provide
+				support for families who are facing similar difficulties as we
+				are one Singapore.
+				{"\n"} {"\n"}
+				SME, Entrepreneurs and Families can request for help, and any
+				kind soul will reach out to you and help out in their own way,
+				be it monetary or technicalities. {"\n"}
 			</Text>
-			<Text style={styles.welcomeText2}>
-				Together, (insert some quote)! {"\n"}
-			</Text>
+			<Text style={styles.welcomeText2}>Together We Give! {"\n"}</Text>
 			<Button
 				color="crimson"
 				paddingTop="100"

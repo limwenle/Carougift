@@ -110,8 +110,7 @@ function OneListingPage({ navigation }) {
 							[
 								{
 									text: "Yes",
-									onPress: () =>
-										navigation.navigate("ChatList"),
+									onPress: () => navigation.navigate("Chat"),
 								},
 								{ text: "No" },
 							]

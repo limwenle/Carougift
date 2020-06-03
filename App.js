@@ -25,6 +25,7 @@ import ExternalPage from "./app/screens/External";
 import HuFamilyRequest from "./ManageListingsScreen/HuFamilyRequest";
 import MollyIndivRequest from "./ManageListingsScreen/MollyIndivRequest";
 import BeautyClothingRequest from "./ManageListingsScreen/BeautyClothingRequest";
+import { color } from "react-native-reanimated";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -40,15 +41,16 @@ function HomeTabs() {
 				name="HelpSomeone"
 				component={MultipleListingsPage}
 				options={{
-					tabBarLabel: "Home",
+					title: "Support",
+					tabBarLabel: "Support",
 					tabBarIcon: ({ focused }) =>
 						focused ? (
 							<Image
 								style={{
-									width: 30,
-									height: 30,
+									width: 35,
+									height: 35,
 								}}
-								source={require("./app/assets/home.png")}
+								source={require("./app/assets/help.jpg")}
 							/>
 						) : (
 							<Image
@@ -56,7 +58,7 @@ function HomeTabs() {
 									width: 30,
 									height: 30,
 								}}
-								source={require("./app/assets/home.png")}
+								source={require("./app/assets/help.jpg")}
 							/>
 						),
 				}}
@@ -65,6 +67,7 @@ function HomeTabs() {
 				name="Request"
 				component={RequestScreen}
 				options={{
+					title: "Request",
 					tabBarLabel: "Request",
 					tabBarIcon: ({ focused }) =>
 						focused ? (
@@ -90,6 +93,7 @@ function HomeTabs() {
 				name="ChatList"
 				component={ChatListScreen}
 				options={{
+					title: "Chat",
 					tabBarLabel: "Message",
 					tabBarIcon: ({ focused }) =>
 						focused ? (
@@ -115,6 +119,7 @@ function HomeTabs() {
 				name="MainManageListings"
 				component={MainManageListings}
 				options={{
+					title: "Account",
 					tabBarLabel: "Account",
 					tabBarIcon: ({ focused }) =>
 						focused ? (
@@ -145,15 +150,15 @@ function App() {
 		<NavigationContainer>
 			<Stack.Navigator
 				screenOptions={{
+					title: "CanIGive",
 					headerStyle: {
-						backgroundColor: "#FF7F00",
+						backgroundColor: "#FE8A71",
 					},
 					headerTintColor: "#fff",
 					headerTitleStyle: {
 						fontWeight: "bold",
 					},
 					headerTitleAlign: "center",
-					title: "CanIGive",
 				}}
 				initialRouteName="Home"
 			>
@@ -184,6 +189,7 @@ function App() {
 				<Stack.Screen
 					name="MultipleListingsPage"
 					component={MultipleListingsPage}
+					options={{ title: "Support" }}
 				/>
 				<Stack.Screen
 					name="HelpSomeone"

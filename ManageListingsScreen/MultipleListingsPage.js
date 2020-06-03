@@ -12,17 +12,24 @@ import styles from "../styles/global";
 
 function MultipleListingsPage({ navigation }) {
 	return (
-		<>
-			<Picker
-				//selectedValue={selectedValue}
-				style={{ height: 50, width: 410 }}
-				//onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-			>
-				<Picker.Item key={-1} label={"Filter By..."} value="first" />
-				<Picker.Item label="Donations" value="java" />
-				<Picker.Item label="Products" value="js" />
-				<Picker.Item label="Services" value="js" />
-			</Picker>
+		<ScrollView style={{ backgroundColor: "#F9D89C" }}>
+			<View style={{ borderWidth: 2 }}>
+				<Picker
+					//selectedValue={selectedValue}
+					style={{ height: 50, width: 410 }}
+					//onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+				>
+					<Picker.Item
+						key={-1}
+						label={"Filter By..."}
+						value="first"
+					/>
+					<Picker.Item label="Donations" value="java" />
+					<Picker.Item label="Products" value="js" />
+					<Picker.Item label="Services" value="js" />
+				</Picker>
+			</View>
+			{/* 
 			<Text
 				style={{
 					fontSize: 40,
@@ -33,14 +40,15 @@ function MultipleListingsPage({ navigation }) {
 				}}
 			>
 				Help Requests
-			</Text>
+			</Text> */}
 			<Text
 				style={{
 					fontSize: 20,
 					top: 20,
 					justifyContent: "center",
-					textAlign: "center",
-					color: "tomato",
+					textAlign: "left",
+					color: "black",
+					backgroundColor: "#F9D89C",
 				}}
 			>
 				Help out these people who are struggling in this global health
@@ -75,6 +83,7 @@ function MultipleListingsPage({ navigation }) {
 							justifyContent: "center",
 							fontSize: 20,
 							color: "white",
+							left: 60,
 						}}
 					>
 						Sultana Book Store
@@ -101,6 +110,7 @@ function MultipleListingsPage({ navigation }) {
 							justifyContent: "center",
 							fontSize: 20,
 							color: "white",
+							left: 50,
 						}}
 					>
 						Molly's Mask Up Task!
@@ -127,6 +137,7 @@ function MultipleListingsPage({ navigation }) {
 							justifyContent: "center",
 							fontSize: 20,
 							color: "white",
+							left: 90,
 						}}
 					>
 						Hu Family
@@ -199,7 +210,7 @@ function MultipleListingsPage({ navigation }) {
 					</Text>
 				</TouchableOpacity>
 			</ScrollView>
-		</>
+		</ScrollView>
 	);
 }
 /* 
