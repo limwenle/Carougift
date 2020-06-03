@@ -2,8 +2,8 @@ import React from "react";
 import {
 	Text,
 	ScrollView,
-	View,
 	Image,
+	View,
 	StyleSheet,
 	TouchableOpacity,
 	Picker,

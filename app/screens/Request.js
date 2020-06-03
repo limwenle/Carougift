@@ -8,24 +8,26 @@ import {
 	Alert,
 	Image,
 	View,
-	TouchableHighlight
+	TouchableHighlight,
 } from "react-native";
 
 function RequestScreen({ navigation }) {
 	return (
 		<ScrollView>
-			<View style={{backgroundColor: "#F9D89C"}}>
-			<Text
-				style={{
-					fontSize: 20,
-					fontWeight: "bold",
-					textAlign: "center",
-				}}
-			>
-				I would like help for my ...{" "}
-			</Text>
+			<View style={{ backgroundColor: "#F9D89C" }}>
+				<Text
+					style={{
+						fontSize: 20,
+						fontWeight: "bold",
+						textAlign: "center",
+					}}
+				>
+					I would like help for my ...{" "}
+				</Text>
 			</View>
-			<TouchableHighlight onPress={() => navigation.navigate("CompanyForm")}>
+			<TouchableHighlight
+				onPress={() => navigation.navigate("CompanyForm")}
+			>
 				<Image
 					source={{
 						width: 600,
@@ -41,7 +43,9 @@ function RequestScreen({ navigation }) {
 				title="Company"
 				onPress={() => navigation.navigate("CompanyForm")}
 			/>
-			<TouchableHighlight onPress={() => navigation.navigate("FamilyForm")}>
+			<TouchableHighlight
+				onPress={() => navigation.navigate("FamilyForm")}
+			>
 				<Image
 					source={{
 						width: 415,
@@ -57,7 +61,9 @@ function RequestScreen({ navigation }) {
 				title="Family"
 				onPress={() => navigation.navigate("FamilyForm")}
 			/>
-			<TouchableHighlight onPress={() => navigation.navigate("IndividualForm")}>
+			<TouchableHighlight
+				onPress={() => navigation.navigate("IndividualForm")}
+			>
 				<Image
 					source={{
 						width: 450,
