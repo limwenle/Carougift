@@ -12,7 +12,7 @@ import styles from "../styles/global";
 import Unorderedlist from "react-native-unordered-list";
 import * as Progress from "react-native-progress";
 
-function OneListingPage({ navigation }) {
+function MollyIndivRequest({ navigation }) {
   return (
     <>
       <ScrollView style={styles.sultanaPage}>
@@ -26,40 +26,28 @@ function OneListingPage({ navigation }) {
 
         <View>
           <Image
-            source={{
-              uri:
-                "https://s.yimg.com/uu/api/res/1.2/sM.jBOH2_j.eBjsmn3v1RQ--~B/aD0xOTM2O3c9MjU5MjtzbT0xO2FwcGlkPXl0YWNoeW9u/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2019-08/d7729310-c570-11e9-87fb-68abcc472697",
-            }}
-            style={{
-              width: 415,
-              height: 250,
-              alignSelf: "center",
-            }}
+            source={require("../app/assets/MollySew.jpg")}
+            style={styles.HuFamilyImage}
           />
 
           <Text style={styles.sultanaHeading}>
-            {"\n"}Sultana Book Store {"\n"}
+            {"\n"}Molly's Mask Up Task! {"\n"}
           </Text>
         </View>
 
         <Unorderedlist style={styles.sultanaTop}>
           <Text>
-            Company Name:
-            <Text style={styles.underlineText}>Sultana Book Store</Text>
+            Campaign Name:
+            <Text style={styles.underlineText}>Molly's Mask Up Task!</Text>
           </Text>
         </Unorderedlist>
 
         <Unorderedlist style={styles.sultanaTop}>
           <Text>
-            UEN Number:
-            <Text style={styles.underlineText}>12345678A</Text>
-          </Text>
-        </Unorderedlist>
-
-        <Unorderedlist style={styles.sultanaTop}>
-          <Text>
-            Target Fund:
-            <Text style={styles.underlineText}>$1,000 {"\n"}</Text>
+            Products requested:
+            <Text style={styles.underlineText}>
+              Sewing Machine loan, Sewing materials {"\n"}
+            </Text>
           </Text>
         </Unorderedlist>
 
@@ -70,19 +58,22 @@ function OneListingPage({ navigation }) {
         </View>
 
         <Text style={styles.sultanaDescription}>
-          My wife and I owns the bookstore. Due to the COVID-19 situation, we
-          have not been able to operate for the past 2 months. Though there have
-          been grants given by the government, we are unable to sustain our
-          losses at this rate. We are seeking donations to keep our
-          old-fashioned bookstore afloat. Any amount will be appreciated, thank
-          you! {"\n"}
+          Hello fellow SGeans!! I am Molly. I am a full time housewife, and me
+          and my two daughters are at home the entire stay-home period. We all
+          love to sew, and know how to sew masks at home from raw cloth.
+          However, we only have one sewing machine at home. If you have any
+          sewing machines at home and is not using them now, you can lend it to
+          us temporarily! We are trying to make as many masks as possible and
+          give them to the CCs. Any sewing materials like threads and cloth are
+          welcome too! You can contact me with the chat and we can arrange a
+          meetup. {"\n"}
         </Text>
 
         {/*
         <Image
           style={styles.progressBar}
           source={require("../app/assets/ProgressBar.png")}
-        /> */}
+        /> 
 
         <Text>
           <Text style={styles.boldText}>$477</Text>
@@ -95,9 +86,9 @@ function OneListingPage({ navigation }) {
           color={"green"}
           borderColor={"black"}
           borderWidth={1}
-        />
+        /> 
 
-        <Text>{"\n"}</Text>
+        <Text>{"\n"}</Text> */}
 
         <TouchableOpacity
           onPress={() =>
@@ -187,4 +178,4 @@ const styles = StyleSheet.create({
 */
 }
 
-export default OneListingPage;
+export default MollyIndivRequest;
