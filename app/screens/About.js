@@ -8,6 +8,7 @@ import {
 	TextInput,
 	Alert,
 	Image,
+	TouchableOpacity,
 } from "react-native";
 import MainPage from "./MainPage";
 
@@ -16,9 +17,10 @@ function AboutScreen({ navigation }) {
 		<View style={styles.welcome1}>
 			<Image
 				source={{
-					width: 100,
-					height: 150,
-					uri: "https://picsum.photos/200/300",
+					width: 120,
+					height: 120,
+					uri:
+						"https://cdn4.iconfinder.com/data/icons/thank-you/256/Artboard_5_copy-512.png",
 				}}
 			/>
 			<Text>{"\n"}</Text>
@@ -27,24 +29,21 @@ function AboutScreen({ navigation }) {
 			</Text>
 			<Text style={styles.welcomeText1}>
 				CanIGive is a platform aimed towards supporting our local Small
-				and Medium Enterprises(SME) and Entrepreneurs by providing an
-				avenue for our local selfless citizens to contribute in their
-				own ways and help all these businesses tide through this tough
-				period. As an extension from our goal, we want to provide
-				similar support for families and high-risk individuals who are
-				facing similar difficulties.
+				and Medium Enterprises(SME) and Entrepreneurs. It is an avenue
+				for other citizens to contribute in their own ways and help
+				these businesses tide through this tough period. As an extension
+				from our goal, we want to provide support for families and
+				high-risk individuals who are facing similar difficulties.
 				{"\n"} {"\n"}
-				Businesses, Families and Individual can request for help, and
-				any kind soul will reach out to you and help out in their own
-				way, be it monetary or technicalities. {"\n"}
+				Businesses, Families and Individuals can request for help, from
+				others who will reach out to them and help out in their own way,
+				be it monetary or technicalities. {"\n"}
 			</Text>
 			<Text style={styles.welcomeText2}>Together We Give! {"\n"}</Text>
-			<Button
-				color="crimson"
-				paddingTop="100"
-				title="Back to Home page"
-				onPress={() => navigation.navigate(MainPage)}
-			/>
+
+			<TouchableOpacity onPress={() => navigation.navigate("MainPage")}>
+				<Text style={styles.loginButton}>Back to My Account</Text>
+			</TouchableOpacity>
 		</View>
 	);
 }

@@ -11,7 +11,7 @@ import {
 
 function MainManageListings({ navigation }) {
   return (
-    <>
+    <View style={styles.accountPage}>
       <Image
         style={styles.pfp}
         source={{
@@ -68,7 +68,7 @@ function MainManageListings({ navigation }) {
       >
         <Text style={{ fontSize: 20, color: "white" }}>Logout</Text>
       </TouchableOpacity>
-    </>
+    </View>
   );
 }
 
@@ -161,6 +161,10 @@ const styles = StyleSheet.create({
     top: 180,
     width: "90%",
     alignSelf: "center",
+  },
+  accountPage: {
+    flex: 1,
+    backgroundColor: "#F9D89C",
   },
 });
 
